@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">INGRESO AL TEC</string>
+<!-- TODO: Remove or change this placeholder text -->
+
+    <string name="tittle_fragment">Inicio de sesion</string>
+    <string name="tittle_User">Usuario: </string>
+    <string name="tittle_pwd">Contraseña: </string>
+    <string name="tittle_boton">Iniciar de Secion</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
