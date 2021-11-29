@@ -39,10 +39,13 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_sesion, container, false);
         View vista  = inflater.inflate(R.layout.fragment_sesion,container,false);
+
         cajaemail=(EditText) vista.findViewById(R.id.txtUser);
         cajapwd=(EditText) vista.findViewById(R.id.txtpwd);
         btnConsultar= (Button) vista.findViewById(R.id.btnSesion);
+
         rq = Volley.newRequestQueue(getContext());
+
         btnConsultar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,7 +81,7 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
         }
     }
     private void iniciarSecion(){
-        String url = "http://192.168.42.130/android/sesion.php?email="+cajaemail.getText().toString()+
+        String url = "http://192.168.1.142/android/sesion.php?"+"email="+cajaemail.getText().toString()+
                 "&pwd="+cajapwd.getText().toString();
         jrq = new JsonObjectRequest(Request.Method.GET ,url,null,this,this);
         rq.add(jrq);
