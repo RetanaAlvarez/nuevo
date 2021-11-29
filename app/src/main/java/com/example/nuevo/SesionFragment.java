@@ -30,7 +30,7 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
     JsonRequest jrq;
 
 
-    EditText cajaemail,cajaconstraseña;
+    EditText cajaemail,cajapwd;
     Button btnConsultar;
 
     @Override
@@ -40,7 +40,7 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
         //return inflater.inflate(R.layout.fragment_sesion, container, false);
         View vista  = inflater.inflate(R.layout.fragment_sesion,container,false);
         cajaemail=(EditText) vista.findViewById(R.id.txtUser);
-        cajaconstraseña=(EditText) vista.findViewById(R.id.txtpwd);
+        cajapwd=(EditText) vista.findViewById(R.id.txtpwd);
         btnConsultar= (Button) vista.findViewById(R.id.btnSesion);
         rq = Volley.newRequestQueue(getContext());
         btnConsultar.setOnClickListener(new View.OnClickListener() {
@@ -71,15 +71,15 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
         try {
             jsonObjectson= jsonArray.getJSONObject(0);
             login.setEmail(jsonObjectson.optString("email"));
-            login.setContraseña(jsonObjectson.optString("contraseña"));
-            login.setName(jsonObjectson.optString("name"));
+            login.setPwd(jsonObjectson.optString("pwd"));
+            login.setNombre(jsonObjectson.optString("nombre"));
         }catch (JSONException e){
             e.printStackTrace();
         }
     }
     private void iniciarSecion(){
-        String url = "http://192.168.42.123/android/sesion.php?email="+cajaemail.getText().toString()+
-                "&contraseña="+cajaconstraseña.getText().toString();
+        String url = "http://192.168.42.130/android/sesion.php?email="+cajaemail.getText().toString()+
+                "&pwd="+cajapwd.getText().toString();
         jrq = new JsonObjectRequest(Request.Method.GET ,url,null,this,this);
         rq.add(jrq);
     }
