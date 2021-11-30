@@ -34,8 +34,7 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
     Button btnConsultar;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_sesion, container, false);
         View vista  = inflater.inflate(R.layout.fragment_sesion,container,false);
@@ -81,7 +80,7 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
         }
     }
     private void iniciarSecion(){
-        String url = "http://192.168.1.142/android/sesion.php?"+"email="+cajaemail.getText().toString()+
+        String url = "http://192.168.1.142/android/sesion.php?&email="+cajaemail.getText().toString()+
                 "&pwd="+cajapwd.getText().toString();
         jrq = new JsonObjectRequest(Request.Method.GET ,url,null,this,this);
         rq.add(jrq);
