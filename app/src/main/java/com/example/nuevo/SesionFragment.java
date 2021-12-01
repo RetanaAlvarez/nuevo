@@ -19,10 +19,12 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.Volley;
+import com.android.volley.ParseError;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 
 
 public class SesionFragment extends Fragment implements  Response.Listener<JSONObject>, Response.ErrorListener {
@@ -59,6 +61,8 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
     @Override
     public void onErrorResponse(VolleyError error) {
         Toast.makeText(getContext(), "No se encontro el usuario "+ error.toString(),Toast.LENGTH_SHORT).show();
+        //error.printStackTrace();
+
     }
 
     @Override
@@ -67,20 +71,21 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
         Toast.makeText(getContext(),"se ha encontrado el usuario. "+cajaemail.getText().toString(),Toast.LENGTH_SHORT).show();
 
         JSONArray jsonArray = response.optJSONArray("datos");
-        JSONObject jsonObjectson= null;
+        JSONObject jsonObject= null;
 
 
         try {
-            jsonObjectson= jsonArray.getJSONObject(0);
-            login.setEmail(jsonObjectson.optString("email"));
-            login.setPwd(jsonObjectson.optString("pwd"));
-            login.setNombre(jsonObjectson.optString("nombre"));
+            jsonObject= jsonArray.getJSONObject(0);
+            login.setEmail(jsonObject.optString("email"));
+            login.setPwd(jsonObject.optString("pwd"));
+            login.setNombres(jsonObject.optString("nombres"));
         }catch (JSONException e){
             e.printStackTrace();
         }
     }
     private void iniciarSecion(){
         String url = "http://192.168.1.142/android/sesion.php?&email="+cajaemail.getText().toString()+
+        //String url = "https://controltesjo.000webhostapp.com/sesion.php?&email="+cajaemail.getText().toString()+
                 "&pwd="+cajapwd.getText().toString();
         jrq = new JsonObjectRequest(Request.Method.GET ,url,null,this,this);
         rq.add(jrq);
