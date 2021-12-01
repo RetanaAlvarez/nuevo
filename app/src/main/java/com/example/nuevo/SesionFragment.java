@@ -1,5 +1,6 @@
 package com.example.nuevo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,6 +53,7 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
             public void onClick(View v) {
 
                 iniciarSecion();
+
             }
         }
         );
@@ -61,7 +63,7 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
     @Override
     public void onErrorResponse(VolleyError error) {
         Toast.makeText(getContext(), "No se encontro el usuario "+ error.toString(),Toast.LENGTH_SHORT).show();
-        //error.printStackTrace();
+        error.printStackTrace();
 
     }
 
@@ -87,7 +89,10 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
         String url = "http://192.168.1.142/android/sesion.php?&email="+cajaemail.getText().toString()+
         //String url = "https://controltesjo.000webhostapp.com/sesion.php?&email="+cajaemail.getText().toString()+
                 "&pwd="+cajapwd.getText().toString();
+
         jrq = new JsonObjectRequest(Request.Method.GET ,url,null,this,this);
         rq.add(jrq);
+
+
     }
 }
