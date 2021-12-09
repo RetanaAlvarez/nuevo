@@ -1,7 +1,7 @@
 package com.example.nuevo;
 
 public class User {
-    private String email,pwd,nombres;
+    private String email, pwd, nombre;
 
     public String getEmail() {
         return email;
@@ -19,11 +19,11 @@ public class User {
         this.pwd = pwd;
     }
 
-    public String getNombres() {
-        return nombres;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNombres(String nombres) {
-        this.nombres = nombres;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }

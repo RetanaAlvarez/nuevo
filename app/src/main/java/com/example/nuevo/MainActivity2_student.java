@@ -7,8 +7,6 @@ import android.widget.Button;
 
 public class MainActivity2_student extends AppCompatActivity {
 
-    Button btnSesion;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

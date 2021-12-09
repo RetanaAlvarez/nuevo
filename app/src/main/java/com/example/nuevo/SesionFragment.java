@@ -80,10 +80,12 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
             jsonObject= jsonArray.getJSONObject(0);
             login.setEmail(jsonObject.optString("email"));
             login.setPwd(jsonObject.optString("pwd"));
-            login.setNombres(jsonObject.optString("nombres"));
+            login.setNombre(jsonObject.optString("nombre"));
         }catch (JSONException e){
             e.printStackTrace();
         }
+        Intent intento = new Intent(getContext(),MainActivity2_student.class);
+        startActivity(intento);
     }
     private void iniciarSecion(){
         String url = "http://192.168.1.142/android/sesion.php?&email="+cajaemail.getText().toString()+
