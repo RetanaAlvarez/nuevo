@@ -5,8 +5,14 @@
     <string name="tittle_fragment">Inicio de sesion</string>
     <string name="tittle_User">Usuario: </string>
     <string name="tittle_pwd">Contraseña: </string>
-    <string name="tittle_boton">Iniciar de Secion</string>
+    <string name="tittle_boton">Iniciar de Sesion</string>
+    <string name="boton_encuesta">Encuesta</string>
+    <string name="Button_perfil">Datos del perfil</string>
+    <string name="button_Qr">Generador de Qr</string>
+    <string name="button_lector">Lector de Qr</string>
+    <string name="Tema_de_menu">aqui va el tema del menu</string>
+    <string name="Texto_menu">Lorem ipsum dolor sit amet consectetur adipiscing elit, mus eros erat euismod natoque primis, luctus dictum torquent pulvinar congue magnis. Potenti justo leo eget morbi vehicula netus accumsan sociosqu nam convallis, torquent id curabitur imperdiet nec conubia fusce dignissim. Ante feugiat etiam cum condimentum netus vehicula ornare, dapibus facilisis varius ultrices morbi iaculis, sodales cursus laoreet cubilia platea sollicitudin.
+        Rutrum nam luctus risus lobortis commodo quisque, tincidunt elementum eleifend dui massa volutpat, ac himenaeos libero tortor dignissim. Rhoncus fermentum potenti ultricies vel lacinia ante arcu curae congue, habitasse varius tempus dictum leo vulputate elementum at, porttitor habitant sem dapibus placerat sapien sodales penatibus. Nunc ut vivamus potenti interdum taciti duis, gravida diam himenaeos sed sapien, aptent ultrices fringilla rhoncus dui.</string>
 
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

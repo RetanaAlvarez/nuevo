@@ -85,6 +85,8 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
             e.printStackTrace();
         }
         Intent intento = new Intent(getContext(),MainActivity2_student.class);
+        intento.putExtra(MainActivity2_student.name,login.getNombre());
+
         startActivity(intento);
     }
     private void iniciarSecion(){

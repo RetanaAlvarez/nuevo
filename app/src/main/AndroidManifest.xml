@@ -17,10 +17,12 @@
         android:theme="@style/Theme.Nuevo"
         android:usesCleartextTraffic="true">
         <activity
-        android:name=".MainActivity2_student"
-        android:exported="false"
-        android:parentActivityName=".MainActivity2_student" />
-
+            android:name=".encuesta"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2_student"
+            android:exported="false"
+            android:parentActivityName=".MainActivity2_student" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
