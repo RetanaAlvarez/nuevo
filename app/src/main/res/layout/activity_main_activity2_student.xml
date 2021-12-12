@@ -37,7 +37,7 @@
         app:srcCompat="@drawable/tesjo" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/Button_encuesta"
         android:layout_width="122dp"
         android:layout_height="48dp"
         android:layout_marginStart="52dp"
@@ -48,7 +48,7 @@
         tools:text="@string/boton_encuesta" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_perfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -59,7 +59,7 @@
         tools:text="@string/Button_perfil" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button_lector"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -67,7 +67,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/button_perfil" />
 
     <TextView
         android:id="@+id/textView"
@@ -79,7 +79,7 @@
         android:text="@string/Tema_de_menu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/button_lector" />
 
     <TextView
         android:id="@+id/textView5"
