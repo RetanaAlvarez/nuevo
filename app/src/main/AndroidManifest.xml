@@ -10,18 +10,18 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/tesjo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/faces"
         android:supportsRtl="true"
         android:theme="@style/Theme.Nuevo"
         android:usesCleartextTraffic="true">
         <activity
             android:name=".encuesta"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity2_student"
-            android:exported="false"
+            android:exported="true"
             android:parentActivityName=".MainActivity2_student" />
         <activity
             android:name=".MainActivity"

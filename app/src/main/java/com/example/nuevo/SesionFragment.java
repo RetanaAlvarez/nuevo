@@ -90,7 +90,7 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
         startActivity(intento);
     }
     private void iniciarSecion(){
-        String url = "http://192.168.1.142/android/sesion.php?&email="+cajaemail.getText().toString()+
+        String url = "http://controltesjo.000webhostapp.com/sesion.php?&email="+cajaemail.getText().toString()+
         //String url = "https://controltesjo.000webhostapp.com/sesion.php?&email="+cajaemail.getText().toString()+
                 "&pwd="+cajapwd.getText().toString();
 
