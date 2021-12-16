@@ -17,6 +17,9 @@
         android:theme="@style/Theme.Nuevo"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Main_alumnos_docentes"
+            android:exported="false" />
+        <activity
             android:name=".encuesta"
             android:exported="true" />
         <activity

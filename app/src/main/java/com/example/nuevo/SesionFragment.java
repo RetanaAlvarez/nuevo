@@ -81,13 +81,25 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
             login.setEmail(jsonObject.optString("email"));
             login.setPwd(jsonObject.optString("pwd"));
             login.setNombre(jsonObject.optString("nombre"));
+
+            if(jsonObject.optString("ID_privilegios").equals("3")){
+                Intent intento = new Intent(getContext(),MainActivity2_student.class);
+                intento.putExtra(MainActivity2_student.name,login.getNombre());
+                startActivity(intento);
+            }else if(jsonObject.optString("ID_privilegios").equals ("1") ||
+                        jsonObject.optString("ID_privilegios").equals("2")  ){
+                Intent intento = new Intent(getContext(),Main_alumnos_docentes.class);
+                //intento.putExtra(Main_alumnos_docentes.name,login.getNombre());
+                startActivity(intento);
+
+            }
+
+
+
         }catch (JSONException e){
             e.printStackTrace();
         }
-        Intent intento = new Intent(getContext(),MainActivity2_student.class);
-        intento.putExtra(MainActivity2_student.name,login.getNombre());
 
-        startActivity(intento);
     }
     private void iniciarSecion(){
         String url = "http://controltesjo.000webhostapp.com/sesion.php?&email="+cajaemail.getText().toString()+
