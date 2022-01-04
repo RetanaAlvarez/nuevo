@@ -88,22 +88,17 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
                 startActivity(intento);
             }else if(jsonObject.optString("ID_privilegios").equals ("1") ||
                         jsonObject.optString("ID_privilegios").equals("2")  ){
-                Intent intento = new Intent(getContext(),Main_alumnos_docentes.class);
-                //intento.putExtra(Main_alumnos_docentes.name,login.getNombre());
-                startActivity(intento);
-
+                Intent intent = new Intent(getContext(),Main_alumnos_docentes.class);
+                intent.putExtra(Main_alumnos_docentes.names,login.getNombre());
+                startActivity(intent);
             }
-
-
-
         }catch (JSONException e){
             e.printStackTrace();
         }
-
     }
     private void iniciarSecion(){
         String url = "http://controltesjo.000webhostapp.com/sesion.php?&email="+cajaemail.getText().toString()+
-        //String url = "https://controltesjo.000webhostapp.com/sesion.php?&email="+cajaemail.getText().toString()+
+        //String url = "https://192.168.1.142/sesion.php?&email="+cajaemail.getText().toString()+
                 "&pwd="+cajapwd.getText().toString();
 
         jrq = new JsonObjectRequest(Request.Method.GET ,url,null,this,this);

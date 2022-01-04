@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity2_student extends AppCompatActivity {
-public Button button;
+    public Button button;
     public static  final  String name = "nombre";
 
     TextView cajaBienvenido;
