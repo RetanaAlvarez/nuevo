@@ -1,6 +1,6 @@
 package com.example.nuevo;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,7 +8,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class encuesta extends AppCompatActivity {
@@ -144,18 +144,37 @@ public class encuesta extends AppCompatActivity {
             //IF para verificar si se ha aprobado o reprobado
             if(nota >=8) {
                 txtPregunta.setText("Estado: ¡Estas En buenas Condiciones!");
+                rdOpc1.setVisibility(View.GONE);
+                rdOpc2.setVisibility(View.GONE);
+                btnSiguiente.setOnClickListener(new View.OnClickListener() {
 
+                    @Override
+                    public void onClick(View v) {
+                        Intent intento = new Intent(encuesta.this,qr.class);
+                        startActivity(intento);
+                    }
+                });
             }else if(nota ==7 || nota ==5 || nota ==6) {
                 txtNpregunta.setText("Nota obtenida: " + nota);
-                txtPregunta.setText("Estado: Preventivo. ¡Deberias cuidate e ir a checar con un doctor!");}
-
-            else if(nota <=4){
-                txtPregunta.setText("Estado: ¡Precautivo.! ¡No debes asistir al colegio!");
+                txtPregunta.setText("Estado: Preventivo. ¡Deberias cuidate e ir a checar con un doctor!");
+                rdOpc1.setVisibility(View.GONE);
+                rdOpc2.setVisibility(View.GONE);
+                btnSiguiente.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intento = new Intent(encuesta.this, qr.class);
+                        startActivity(intento);
+                    }
+                });
             }
-            //Se ocultan las opciones que no se van a usar para ver la nota y resultado
-            rdOpc1.setVisibility(View.GONE);
-            rdOpc2.setVisibility(View.GONE);
-            btnSiguiente.setVisibility(View.GONE);
+            else if(nota <=4) {
+                txtPregunta.setText("Estado: ¡Precautivo.! ¡No debes asistir al colegio!");
+
+                //Se ocultan las opciones que no se van a usar para ver la nota y resultado
+                rdOpc1.setVisibility(View.GONE);
+                rdOpc2.setVisibility(View.GONE);
+                btnSiguiente.setVisibility(View.GONE);
+            }
         }
     }
     public void Salir(View v){

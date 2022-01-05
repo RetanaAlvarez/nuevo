@@ -1,13 +1,10 @@
 package com.example.nuevo;
 
-import androidx.appcompat.app.AppCompatActivity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.content.Intent;
-import android.view.View;
 import android.widget.TextView;
-import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class perfil extends AppCompatActivity {
     public Button button;
@@ -23,38 +20,32 @@ public class perfil extends AppCompatActivity {
         setContentView(R.layout.activity_perfil);
 
         cajanumero=(TextView)findViewById(R.id.textnumero);
-        String logn = getIntent().getStringExtra("numerodecontrol");
-        cajanumero.setText("numerodecontrol:_"+logn);
-
-        cajatextnombre=(TextView)findViewById(R.id.textnom);
-        String login = getIntent().getStringExtra("nombre");
-        cajatextnombre.setText("nombres:_"+login);
+        String logi = getIntent().getStringExtra("numerodecontrol");
+        cajanumero.setText("numero de control: "+logi);
 
         cajaapellp=(TextView)findViewById(R.id.textapellp);
-        String log = getIntent().getStringExtra("apellidoP");
-        cajaapellp.setText("apellidoP:_"+log);
+        logi = getIntent().getStringExtra("apellidoP");
+        cajaapellp.setText("apellido P: "+logi);
 
         cajaapellM=(TextView)findViewById(R.id.textapellM);
-        String lo = getIntent().getStringExtra("apellidoM");
-        cajaapellM.setText("apellidoM:_"+lo);
+        logi = getIntent().getStringExtra("apellidoM");
+        cajaapellM.setText("apellido M: "+logi);
 
         cajacorreo=(TextView)findViewById(R.id.textCorreo);
-        String l = getIntent().getStringExtra("email");
-        cajacorreo.setText("email:_"+l);
+        logi = getIntent().getStringExtra("email");
+        cajacorreo.setText("email: "+logi);
 
         cajapwd=(TextView)findViewById(R.id.textcontraseña);
-        String ogin = getIntent().getStringExtra("pwd");
-        cajapwd.setText("pwd:_"+ogin);
+        logi = getIntent().getStringExtra("pwd");
+        cajapwd.setText("pwd: "+logi);
 
         cajaedad=(TextView)findViewById(R.id.textedad);
-        String gin = getIntent().getStringExtra("edad");
-        cajaedad.setText("edad:_"+gin);
+        logi = getIntent().getStringExtra("edad");
+        cajaedad.setText("edad: "+logi);
 
         cajatel=(TextView)findViewById(R.id.textel);
-        String in = getIntent().getStringExtra("telefono");
-        cajatel.setText("telefono:_"+in);
-
-
+        logi= getIntent().getStringExtra("telefono");
+        cajatel.setText("telefono: "+logi);
 
     }
 }

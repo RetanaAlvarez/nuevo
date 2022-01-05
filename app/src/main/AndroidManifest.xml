@@ -17,24 +17,16 @@
         android:theme="@style/Theme.Nuevo"
         android:usesCleartextTraffic="true" >
         <activity
-
-            android:name=".qr"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".qr"
+            android:exported="true" />
         <activity
             android:name=".Main_alumnos_docentes"
             android:exported="true" />
@@ -50,7 +42,6 @@
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

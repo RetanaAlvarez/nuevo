@@ -11,7 +11,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.zxing.*;
+import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
@@ -31,7 +31,7 @@ public class qr extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr);
-
+        User login = new User();
 
         //asignacion de variable
 
@@ -43,7 +43,8 @@ public class qr extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //get salida valor de editar texto
-                String sText = etInput.getText().toString().trim();
+                String sText=login.getNumerodecontrol();
+                 sText = etInput.getText().toString().trim();
                 //inicializa multi forma excritura
                 MultiFormatWriter writer = new MultiFormatWriter();
                 try{
@@ -56,16 +57,20 @@ public class qr extends AppCompatActivity {
                     Bitmap bitmap = encoder.createBitmap(matrix);
                     //set bitmap en imagen view
                     ivOutput.setImageBitmap(bitmap);
-                    //inicializar salid manager
+                    //inicializar salir manager
                     InputMethodManager manager = (InputMethodManager)  getSystemService(
                             Context.INPUT_METHOD_SERVICE
                     );
                     //hide soft keyboard
-                    manager.hideSoftInputFromWindow(etInput.getApplicationWindowToken(),0);
+                    manager.hideSoftInputFromWindow(etInput.getApplicationWindowToken(),1);
                 }catch (WriterException e){
                     e.printStackTrace();
                 }
+
             }
         });
+    }
+    public void Salir(View v){
+        finish();
     }
 }

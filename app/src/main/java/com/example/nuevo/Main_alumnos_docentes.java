@@ -1,13 +1,12 @@
 package com.example.nuevo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
-import android.content.Intent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Main_alumnos_docentes extends AppCompatActivity {
     public Button button,button2;
@@ -18,10 +17,10 @@ public class Main_alumnos_docentes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_alumnos_docentes);
-        User login= new User();
+        User logi= new User();
         cajaBienvenido=(TextView)findViewById(R.id.txtBienvenida);
-        String logi=getIntent().getStringExtra("nombre");
-        cajaBienvenido.setText("¡bienvenido "+logi+"!");
+        String login=getIntent().getStringExtra("nombre");
+        cajaBienvenido.setText("¡bienvenido "+login+"!");
 
         button= (Button) findViewById(R.id.button);
         button2= (Button) findViewById(R.id.button2);
@@ -39,7 +38,7 @@ public class Main_alumnos_docentes extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intento = new Intent(Main_alumnos_docentes.this,perfil.class);
-                intento.putExtra(perfil.uss,login.getNombre());
+                //intento.putExtra(perfil.uss,login.getNombre());
                 startActivity(intento);
             }
         });

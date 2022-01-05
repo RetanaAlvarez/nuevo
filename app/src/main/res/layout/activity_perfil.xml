@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".perfil">
 
     <TextView
@@ -36,62 +36,8 @@
         android:layout_marginTop="32dp"
         android:text="@string/apellidoP"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textnom"
-        tools:text="@string/apellidoP" />
-
-    <TextView
-        android:id="@+id/textnom"
-        android:layout_width="54dp"
-        android:layout_height="15dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/uss"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textnumero"
-        tools:text="@string/uss" />
-
-    <ImageView
-        android:id="@+id/imagenperfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texttitulo"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/textapellM"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/apellidoM"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textapellp"
-        tools:text="@string/apellidoM" />
-
-    <TextView
-        android:id="@+id/textCorreo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/correo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textapellM"
-        tools:text="@string/correo" />
-
-    <TextView
-        android:id="@+id/textcontraseña"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/contraseña"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textCorreo"
-        tools:text="@string/contraseña" />
+        tools:text="@string/apellidoP" />
 
     <TextView
         android:id="@+id/textedad"
@@ -105,6 +51,39 @@
         tools:text="@string/edad" />
 
     <TextView
+        android:id="@+id/textcontraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/contraseña"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCorreo"
+        tools:text="@string/contraseña" />
+
+    <TextView
+        android:id="@+id/textCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/correo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textapellM"
+        tools:text="@string/correo" />
+
+    <TextView
+        android:id="@+id/textapellM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/apellidoM"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textapellp"
+        tools:text="@string/apellidoM" />
+
+    <TextView
         android:id="@+id/textel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -114,4 +93,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textedad"
         tools:text="@string/telefono" />
+
+    <ImageView
+        android:id="@+id/imagenperfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texttitulo"
+        tools:ignore="ImageContrastCheck"
+        tools:srcCompat="@tools:sample/avatars" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

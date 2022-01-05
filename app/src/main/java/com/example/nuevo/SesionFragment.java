@@ -2,24 +2,22 @@ package com.example.nuevo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 import androidx.fragment.app.Fragment;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.android.volley.Response.ErrorListener;
-import com.android.volley.Response.Listener;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.Volley;
-import com.android.volley.ParseError;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -28,6 +26,7 @@ import org.json.JSONObject;
 
 
 public class SesionFragment extends Fragment implements  Response.Listener<JSONObject>, Response.ErrorListener {
+    User login = new User();
     RequestQueue rq;
     JsonRequest jrq;
 
@@ -68,7 +67,7 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
 
     @Override
     public void onResponse(JSONObject response) {
-        User login = new User();
+
         Toast.makeText(getContext(),"se ha encontrado el usuario. "+cajaemail.getText().toString(),Toast.LENGTH_SHORT).show();
 
         JSONArray jsonArray = response.optJSONArray("datos");
@@ -77,8 +76,8 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
 
         try {
             jsonObject= jsonArray.getJSONObject(0);
-            login.setEmail(jsonObject.optString("email"));
-            login.setPwd(jsonObject.optString("pwd"));
+                login.setEmail(jsonObject.optString("email"));
+                login.setPwd(jsonObject.optString("pwd"));
             login.setNombre(jsonObject.optString("nombre"));
             login.setNumerodecontrol(jsonObject.optString("numerodecontrol"));
 
