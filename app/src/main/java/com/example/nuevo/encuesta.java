@@ -109,7 +109,7 @@ public class encuesta extends AppCompatActivity {
             //Se limpian los Radio buttons para la siguiente pregunta
             rdOpc1.setChecked(false);
             rdOpc2.setChecked(false);
-        }else if(nota ==7 || nota ==5 || nota ==6) {
+        }/*else if(nota ==7 || nota ==5 || nota ==6) {
 
             txtNpregunta.setText("Nota obtenida: " + nota);
             txtPregunta.setText("Estado: Preventivo. ¡Deberias cuidate o checar un doctor!");
@@ -132,7 +132,7 @@ public class encuesta extends AppCompatActivity {
             rdOpc1.setChecked(false);
             rdOpc2.setChecked(false);
 
-        }else{
+        }*/else{
             //Se setean los textos para el resultado de la nota
             if (rdOpc2.isChecked()) {
                 nota = nota + 2;
@@ -144,7 +144,11 @@ public class encuesta extends AppCompatActivity {
             //IF para verificar si se ha aprobado o reprobado
             if(nota >=8) {
                 txtPregunta.setText("Estado: ¡Estas En buenas Condiciones!");
-            }else if(nota <=4){
+            }else if(nota ==7 || nota ==5 || nota ==6) {
+
+                txtNpregunta.setText("Nota obtenida: " + nota);
+                txtPregunta.setText("Estado: Preventivo. ¡Deberias cuidate e ir a checar con un doctor!");}
+            else if(nota <=4){
                 txtPregunta.setText("Estado: ¡Precautivo.! ¡No debes asistir al colegio!");
             }
             //Se ocultan las opciones que no se van a usar para ver la nota y resultado
