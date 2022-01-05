@@ -25,7 +25,7 @@ public class MainActivity2_student extends AppCompatActivity {
         User logi = new User();
 
         button= (Button) findViewById(R.id.Button_encuesta);
-        button2= (Button) findViewById(R.id.button_perfil);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,7 +34,7 @@ public class MainActivity2_student extends AppCompatActivity {
 
             }
         });
-
+        button2= (Button) findViewById(R.id.button_perfil);
         button2.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
