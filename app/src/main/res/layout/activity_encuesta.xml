@@ -15,7 +15,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/edomex"
-        tools:ignore="ImageContrastCheck" />
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -25,7 +26,8 @@
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/tesjo" />
+        app:srcCompat="@drawable/tesjo"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/txtNpregunta"
@@ -33,21 +35,21 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:text="@string/text_titulo_pregunta"
+        android:text="@string/txtNpregunta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        tools:text="@string/text_titulo_pregunta" />
+        tools:text="@string/txtNpregunta" />
 
     <TextView
         android:id="@+id/txtPregunta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="@string/Contenido_De_pregunta"
+        android:text="@string/txtPregunta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNpregunta"
-        tools:text="@string/Contenido_De_pregunta" />
+        tools:text="@string/txtPregunta" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -76,7 +78,7 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/btnSiguiente"
+        android:id="@+id/button_siguente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -87,14 +89,14 @@
         tools:text="@string/button_siguente" />
 
     <Button
-        android:id="@+id/btnSalir"
+        android:id="@+id/button_salir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_salir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSiguiente"
+        app:layout_constraintTop_toBottomOf="@+id/button_siguente"
         tools:text="@string/button_salir" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

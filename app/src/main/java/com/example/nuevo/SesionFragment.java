@@ -2,15 +2,14 @@ package com.example.nuevo;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import androidx.fragment.app.Fragment;
-
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -81,6 +80,7 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
             login.setEmail(jsonObject.optString("email"));
             login.setPwd(jsonObject.optString("pwd"));
             login.setNombre(jsonObject.optString("nombre"));
+            login.setNumerodecontrol(jsonObject.optString("numerodecontrol"));
 
             if(jsonObject.optString("ID_privilegios").equals("3")){
                 Intent intento = new Intent(getContext(),MainActivity2_student.class);

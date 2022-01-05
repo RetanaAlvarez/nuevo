@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">INGRESO AL TEC</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
 
     <string name="tittle_fragment">Inicio de sesion</string>
     <string name="tittle_User">Usuario: </string>
@@ -13,12 +13,23 @@
     <string name="Tema_de_menu">aqui va el tema del menu</string>
     <string name="Texto_menu">Lorem ipsum dolor sit amet consectetur adipiscing elit, mus eros erat euismod natoque primis, luctus dictum torquent pulvinar congue magnis. Potenti justo leo eget morbi vehicula netus accumsan sociosqu nam convallis, torquent id curabitur imperdiet nec conubia fusce dignissim. Ante feugiat etiam cum condimentum netus vehicula ornare, dapibus facilisis varius ultrices morbi iaculis, sodales cursus laoreet cubilia platea sollicitudin.
         Rutrum nam luctus risus lobortis commodo quisque, tincidunt elementum eleifend dui massa volutpat, ac himenaeos libero tortor dignissim. Rhoncus fermentum potenti ultricies vel lacinia ante arcu curae congue, habitasse varius tempus dictum leo vulputate elementum at, porttitor habitant sem dapibus placerat sapien sodales penatibus. Nunc ut vivamus potenti interdum taciti duis, gravida diam himenaeos sed sapien, aptent ultrices fringilla rhoncus dui.</string>
-    <string name="button_siguente">Seguiente</string>
+    <string name="button_siguente">Siguiente</string>
     <string name="button_salir">Salir</string>
-    <string name="text_titulo_pregunta">pregunta 1</string>
-    <string name="Contenido_De_pregunta">esta es la pregunta 1.su respuesta correcta es la opcion 2</string>
+    <string name="txtNpregunta">pregunta 1</string>
+    <string name="txtPregunta">esta es la pregunta 1.su respuesta correcta es la opcion 2</string>
     <string name="rdBtnOpc1">Opcion 1 p1</string>
     <string name="rdBtnOpc2">Opcion 2 p1</string>
+    <string name="todo">todo</string>
+    <string name="perfil_date">Datos de Perfil</string>
+    <string name="id">numero de control: </string>
+    <string name="uss">nombre: </string>
+    <string name="apellidoP">apellido P: </string>
+    <string name="apellidoM">apellido M: </string>
+    <string name="correo">correo institucional: </string>
+    <string name="contraseña">contraseña :</string>
+    <string name="edad">edad: </string>
+    <string name="telefono">telefono: </string>
+    <string name="usuario">Usuario:</string>
 
 
 </resources>
