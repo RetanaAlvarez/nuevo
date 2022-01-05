@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/qr"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="16dp"
-    android:gravity="center_horizontal"
     tools:context=".qr">
 
     <EditText
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:id="@+id/txtDatos"
-      android:hint="Enter text"
-      android:padding="12dp"
-      android:background="@android:drawable/editbox_background"/>
+        android:id="@+id/txtDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Enter text"
+        android:padding="12dp" />
 
     <TextView
         android:id="@+id/txtBienvenida"
@@ -25,12 +25,13 @@
         android:text="txtBienvenida" />
 
     <Button
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:id="@+id/btnGenerar"
-      android:text="Generador"
-      android:layout_marginTop="16dp"/>
-        <Button
+        android:id="@+id/btnGenerar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Generador" />
+
+    <Button
         android:id="@+id/button_salir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,14 +41,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_siguente" />
-  <ImageView
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:id="@+id/imagen"
-      android:scaleType="fitCenter"
-      android:adjustViewBounds="true"/>
 
-
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter" />
 
 
 </LinearLayout>

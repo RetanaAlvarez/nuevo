@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity2_student extends AppCompatActivity {//implements Response.Listener<JSONObject>,Response.ErrorListener {
     User login = new User();
-    public Button button,button2;
+    public Button button,button2,button3;
     public static final String name = "nombre";
 
     TextView cajaBienvenido;
@@ -25,7 +25,7 @@ public class MainActivity2_student extends AppCompatActivity {//implements Respo
         cajaBienvenido.setText("¡bienvenido " + logi + "!");
 
         button= (Button) findViewById(R.id.Button_encuesta);
-
+        button3=(Button)findViewById(R.id.button_lector);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,6 +49,13 @@ public class MainActivity2_student extends AppCompatActivity {//implements Respo
 
         }
     });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intento = new Intent(MainActivity2_student.this,lector_qr.class);
+                startActivity(intento);
+            }
+        });
     }
 
 }

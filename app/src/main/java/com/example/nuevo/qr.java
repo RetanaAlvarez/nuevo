@@ -7,7 +7,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.zxing.BarcodeFormat;
 import com.journeyapps.barcodescanner.BarcodeEncoder;
 
@@ -19,7 +21,7 @@ public class qr extends AppCompatActivity {
     TextView txtBienvenida;
     Button btnGenera;
     ImageView imgQr;
-    @Override
+    //@Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
@@ -29,8 +31,7 @@ public class qr extends AppCompatActivity {
         imgQr = findViewById(R.id.imagen);
 
         txtBienvenida=(TextView)findViewById(R.id.txtBienvenida);//txtDatos=(TextView)findViewById(R.id.txtBienvenida);
-        String login=getIntent().getStringExtra("numerodecontrol");
-        txtBienvenida.setText("¡bienvenido "+login+"!");
+        String login="2018150480810";
 
 
         btnGenera.setOnClickListener(new View.OnClickListener() {
@@ -54,4 +55,8 @@ public class qr extends AppCompatActivity {
     public void Salir(View v){
         finish();
     }
+
+
+
 }
+
