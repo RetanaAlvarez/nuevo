@@ -78,19 +78,26 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
             jsonObject= jsonArray.getJSONObject(0);
                 login.setEmail(jsonObject.optString("email"));
                 login.setPwd(jsonObject.optString("pwd"));
-            login.setNombre(jsonObject.optString("nombre"));
-            login.setNumerodecontrol(jsonObject.optString("numerodecontrol"));
+                login.setNombre(jsonObject.optString("nombre"));
+                login.setNumerodecontrol(jsonObject.optString("numerodecontrol"));
 
-            if(jsonObject.optString("ID_privilegios").equals("3")){
-                Intent intento = new Intent(getContext(),MainActivity2_student.class);
-                intento.putExtra(MainActivity2_student.name,login.getNombre());
-                startActivity(intento);
+           if(jsonObject.optString("ID_privilegios").equals("3")){
+
+              /* Intent intent = new Intent(getContext(),perfil.class);
+               intent.putExtra(perfil.uss,login.getNombre());
+               intent.putExtra(perfil.numero,login.getNumerodecontrol());
+               startActivity(intent);*/
+               Intent intento = new Intent(getContext(),MainActivity2_student.class);
+               intento.putExtra(MainActivity2_student.name,login.getNombre());
+               startActivity(intento);
+
             }else if(jsonObject.optString("ID_privilegios").equals ("1") ||
                         jsonObject.optString("ID_privilegios").equals("2")  ){
-                Intent intent = new Intent(getContext(),Main_alumnos_docentes.class);
+                Intent intent = new Intent(getContext(),Main_alumnos_docentes.class );
                 intent.putExtra(Main_alumnos_docentes.names,login.getNombre());
                 startActivity(intent);
             }
+
         }catch (JSONException e){
             e.printStackTrace();
         }

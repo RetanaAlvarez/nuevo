@@ -10,7 +10,9 @@
         android:id="@+id/texttitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
         android:text="@string/perfil_date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,14 +20,14 @@
         tools:text="@string/perfil_date" />
 
     <TextView
-        android:id="@+id/textnumero"
+        android:id="@+id/textnombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="76dp"
         android:layout_marginTop="32dp"
         android:text="@string/id"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenperfil"
+        app:layout_constraintTop_toBottomOf="@+id/textnumero"
         tools:text="@string/id" />
 
     <TextView
@@ -36,7 +38,7 @@
         android:layout_marginTop="32dp"
         android:text="@string/apellidoP"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textnumero"
+        app:layout_constraintTop_toBottomOf="@+id/textnombre"
         tools:text="@string/apellidoP" />
 
     <TextView
@@ -94,15 +96,34 @@
         app:layout_constraintTop_toBottomOf="@+id/textedad"
         tools:text="@string/telefono" />
 
-    <ImageView
-        android:id="@+id/imagenperfil"
+    <TextView
+        android:id="@+id/no_de_seguro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="no_de_seguro"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texttitulo"
-        tools:ignore="ImageContrastCheck"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/textel" />
+
+    <TextView
+        android:id="@+id/textnumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="100dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texttitulo" />
+
+    <Button
+        android:id="@+id/btnsalir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="salir"
+        android:text="salir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/no_de_seguro" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

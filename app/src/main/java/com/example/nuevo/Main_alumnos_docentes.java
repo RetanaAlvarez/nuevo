@@ -17,10 +17,10 @@ public class Main_alumnos_docentes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_alumnos_docentes);
-        User logi= new User();
+        User login= new User();
         cajaBienvenido=(TextView)findViewById(R.id.txtBienvenida);
-        String login=getIntent().getStringExtra("nombre");
-        cajaBienvenido.setText("¡bienvenido "+login+"!");
+        String logi=getIntent().getStringExtra("nombre");
+        cajaBienvenido.setText("¡bienvenido "+logi+"!");
 
         button= (Button) findViewById(R.id.button);
         button2= (Button) findViewById(R.id.button2);
@@ -38,7 +38,7 @@ public class Main_alumnos_docentes extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intento = new Intent(Main_alumnos_docentes.this,perfil.class);
-                //intento.putExtra(perfil.uss,login.getNombre());
+                intento.putExtra(perfil.uss,login.getNumerodecontrol());
                 startActivity(intento);
             }
         });

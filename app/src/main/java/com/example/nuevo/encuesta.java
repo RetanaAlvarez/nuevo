@@ -25,6 +25,8 @@ public class encuesta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_encuesta);
 
+
+
         //Se le asigna a cada objeto el id de los que va a usar
         rdOpc1 = (RadioButton) findViewById(R.id.rdBtnOpc1);
         rdOpc2 = (RadioButton) findViewById(R.id.rdBtnOpc2);
@@ -37,6 +39,7 @@ public class encuesta extends AppCompatActivity {
 
     }
     public void Siguiente(View v){
+        User login = new User();
         //if por si no se marca ninguna opcion
         if(rdOpc1.isChecked() == false && rdOpc2.isChecked() == false ){
             Toast.makeText(this, "Elija una opción", Toast.LENGTH_SHORT).show();
@@ -51,8 +54,8 @@ public class encuesta extends AppCompatActivity {
             //Se setean los textos para la siguiente pregunta
             txtNpregunta.setText("Pregunta 2");
             txtPregunta.setText("¿Presentas sintomas de fiebre?");
-            rdOpc1.setText("SÍ");
-            rdOpc2.setText("NO");
+            rdOpc2.setText("SÍ");
+            rdOpc1.setText("NO");
             //Se verifica la respuesta, si es correcta se agregan 2 puntos a la nota
 
             //Se limpian los Radio buttons para la siguiente pregunta
@@ -60,7 +63,7 @@ public class encuesta extends AppCompatActivity {
             rdOpc2.setChecked(false);
         }else if(Npregunta == 2) {
             //Se verifica la respuesta, si es correcta se agregan 2 puntos a la nota
-            if (rdOpc2.isChecked()) {
+            if (rdOpc1.isChecked()) {
                 nota = nota + 2;
             }else{
                 nota = nota + 0;
@@ -87,14 +90,14 @@ public class encuesta extends AppCompatActivity {
             //Se setean los textos para la siguiente pregunta
             txtNpregunta.setText("Pregunta 4");
             txtPregunta.setText("¿Presentas sintomas de cansancio Pérdida del gusto o del olfato?");
-            rdOpc1.setText("SÍ");
-            rdOpc2.setText("NO");
+            rdOpc2.setText("SÍ");
+            rdOpc1.setText("NO");
             //Se limpian los Radio buttons para la siguiente pregunta
             rdOpc1.setChecked(false);
             rdOpc2.setChecked(false);
         }else if(Npregunta == 4) {
             //Se verifica la respuesta, si es correcta se agregan 2 puntos a la nota
-            if (rdOpc2.isChecked()) {
+            if (rdOpc1.isChecked()) {
                 nota = nota + 2;
             } else  {
                 nota = nota + 0;
@@ -151,6 +154,7 @@ public class encuesta extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intento = new Intent(encuesta.this,qr.class);
+                        //intento.putExtra(perfil.numeros,login.getNumerodecontrol());
                         startActivity(intento);
                     }
                 });
@@ -163,6 +167,7 @@ public class encuesta extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intento = new Intent(encuesta.this, qr.class);
+                        //intento.putExtra(perfil.numeros,login.getNumerodecontrol());
                         startActivity(intento);
                     }
                 });

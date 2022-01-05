@@ -13,15 +13,21 @@
     <EditText
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:id="@+id/et_input"
+      android:id="@+id/txtDatos"
       android:hint="Enter text"
       android:padding="12dp"
       android:background="@android:drawable/editbox_background"/>
 
-  <Button
+    <TextView
+        android:id="@+id/txtBienvenida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="txtBienvenida" />
+
+    <Button
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:id="@+id/bt_generate"
+      android:id="@+id/btnGenerar"
       android:text="Generador"
       android:layout_marginTop="16dp"/>
         <Button
@@ -37,7 +43,7 @@
   <ImageView
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:id="@+id/iv_output"
+      android:id="@+id/imagen"
       android:scaleType="fitCenter"
       android:adjustViewBounds="true"/>
 
