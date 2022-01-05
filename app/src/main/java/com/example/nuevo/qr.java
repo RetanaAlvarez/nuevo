@@ -38,7 +38,7 @@ public class qr extends AppCompatActivity  implements  Response.Listener<JSONObj
 
 
         txtBienvenida = (TextView) findViewById(R.id.txtBienvenida);//txtDatos=(TextView)findViewById(R.id.txtBienvenida);
-        String login = "2018150480810";
+        String login = "Esta en condiciones para presentar a la escuela este Usuario";
 
 
         btnGenera.setOnClickListener(new View.OnClickListener() {

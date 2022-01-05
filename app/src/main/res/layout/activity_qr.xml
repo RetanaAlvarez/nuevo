@@ -15,13 +15,8 @@
         android:layout_height="wrap_content"
         android:background="@android:drawable/editbox_background"
         android:hint="Enter text"
-        android:padding="12dp" />
-
-    <TextView
-        android:id="@+id/txtBienvenida"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="txtBienvenida" />
+        android:padding="12dp"
+        android:visibility="invisible" />
 
     <Button
         android:id="@+id/btnGenerar"
