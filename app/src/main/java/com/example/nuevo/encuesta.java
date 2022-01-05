@@ -145,7 +145,6 @@ public class encuesta extends AppCompatActivity {
             if(nota >=8) {
                 txtPregunta.setText("Estado: ¡Estas En buenas Condiciones!");
             }else if(nota ==7 || nota ==5 || nota ==6) {
-
                 txtNpregunta.setText("Nota obtenida: " + nota);
                 txtPregunta.setText("Estado: Preventivo. ¡Deberias cuidate e ir a checar con un doctor!");}
             else if(nota <=4){
