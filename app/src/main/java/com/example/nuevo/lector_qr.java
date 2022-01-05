@@ -35,7 +35,7 @@ public class lector_qr extends AppCompatActivity {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
         if (result != null)
             if (result.getContents() != null){
-                tvBarCode.setText("El codigo de QR es: "+result.getContents());
+                tvBarCode.setText("El codigo de QR es: /n"+result.getContents());
             }else {
                 tvBarCode.setText("Error al escanear el codigo ");
             }
