@@ -7,9 +7,20 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.JsonRequest;
+
 public class perfil extends AppCompatActivity {
+    //llamada de funciones RequesQueve y JsonRequest
+    RequestQueue rq;
+    JsonRequest jrq;
+    //set y get
+    User login = new User();
+    //variables y declariones que
     public Button button, buttonnsultar;
-    public static final String uss = "nombre", numero = "numerodecontrol", apep = "apellidoP", apem = "apellidoM", edad = "edad", tel = "telefono", correo = "email", pwd = "pwd", no_de_seguro = "no_de_seguro", ID_privilegios = "ID_privilegios";
+    public static final String uss = "nombre", numero = "numerodecontrol",
+            apep = "apellidoP", apem = "apellidoM", edad = "edad", tel = "telefono",
+            correo = "email", pwd = "pwd", no_de_seguro = "no_de_seguro", ID_privilegios = "ID_privilegios";
 
     TextView cajatextnombre, cajanumero, cajaapellp, cajaapellM, cajacorreo, cajapwd, cajaedad, cajatel, cajaseguro;
 
@@ -36,43 +47,29 @@ public class perfil extends AppCompatActivity {
                     consultar();
             }
         });
-
     }
-
     public void consultar(){
-
-
-
+        String url = "http://controltesjo.000webhostapp.com/sesion.php?&numerodecontrol=&numerodecontrol";
         String logi = getIntent().getStringExtra("numerodecontrol");
         cajanumero.setText("numero de control: " + logi);
-
-         logi = getIntent().getStringExtra("nombre");
+        logi = getIntent().getStringExtra("nombre");
         cajatextnombre.setText("Nombre :" + logi );
-
         logi = getIntent().getStringExtra("apellidoP");
         cajaapellp.setText("apellido P: " + logi);
-
         logi = getIntent().getStringExtra("apellidoM");
         cajaapellM.setText("apellido M: " + logi);
-
         logi = getIntent().getStringExtra("email");
         cajacorreo.setText("email: " + logi);
-
-        ;
         logi = getIntent().getStringExtra("pwd");
         cajapwd.setText("pwd: " + logi);
-
         logi = getIntent().getStringExtra("edad");
         cajaedad.setText("edad: " + logi);
-
         logi = getIntent().getStringExtra("telefono");
         cajatel.setText("telefono: " + logi);
-
-        logi = getIntent().getStringExtra("no");
-        cajatel.setText("telefono: " + logi);
+        logi = getIntent().getStringExtra("no_de_seguro");
+        cajaseguro.setText("no de seguro: " + logi);
     }
         public void salir (View v){
             finish();
         }
-
 }

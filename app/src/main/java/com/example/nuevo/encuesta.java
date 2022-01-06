@@ -182,7 +182,7 @@ public class encuesta extends AppCompatActivity {
             }
         }
     }
-    public void Salir(View v){
+        public void Salir(View v){
         finish();
     }
 }
