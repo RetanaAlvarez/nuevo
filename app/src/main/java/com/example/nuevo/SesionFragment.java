@@ -79,7 +79,7 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
             login.setNombre(jsonObject.optString("nombre"));
             login.setNumerodecontrol(jsonObject.optString("numerodecontrol"));
             login.setApellidoP(jsonObject.optString("apellidoP"));
-            login.setApellidoM(jsonObject.optString("apellidosM"));
+            login.setApellidoM(jsonObject.optString("apellidoM"));
             login.setEdad(jsonObject.optString("edad"));
             login.setNo_de_seguro(jsonObject.optString("no_de_seguro"));
             login.setTelefono(jsonObject.optString("telefono"));
