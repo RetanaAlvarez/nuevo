@@ -15,7 +15,7 @@ public class MainActivity2_student extends AppCompatActivity {//implements Respo
     //declaracion de variable para los botones
     public Button button,button2,button3;
     //declaracion de extracion del nombre
-    public static final String name = "nombre";
+    public static final String name = "nombre", numero = "numerodecontrol",apep = "apellidoP", apem = "apellidoM", edad = "edad", tel = "telefono",correo = "email", pwd = "pwd", no_de_seguro = "no_de_seguro", ID_privilegios = "ID_privilegios";
     //variable para el texto
     TextView cajaBienvenido;
     @Override
@@ -24,13 +24,30 @@ public class MainActivity2_student extends AppCompatActivity {//implements Respo
         setContentView(R.layout.activity_main_activity2_student);
         //imprime el mensaje con el nombre
         cajaBienvenido = (TextView) findViewById(R.id.textbienvenida);
-        String logi = getIntent().getStringExtra("nombre");
-        cajaBienvenido.setText("¡bienvenido " + logi + "!");
+        String  numero_control= getIntent().getStringExtra("numerodecontrol");
+        String  nombre = getIntent().getStringExtra("nombre");
+        String  apellido_p= getIntent().getStringExtra("apellidoP");
+        String  apellido_m= getIntent().getStringExtra("apellidoM");
+        String  email= getIntent().getStringExtra("email");
+        String  contra= getIntent().getStringExtra("pwd");
+        String  edad= getIntent().getStringExtra("edad");
+        String  tel= getIntent().getStringExtra("telefono");
+        String  seguro= getIntent().getStringExtra("no_de_seguro");
+
+
+        cajaBienvenido.setText("¡bienvenido " + nombre + "!");
         //asignacion con las variables y las variables
         button= (Button) findViewById(R.id.Button_encuesta);
         button3=(Button)findViewById(R.id.button_lector);
-        login.setNumerodecontrol("2334455456677");
-        login.setNombre(logi);
+        login.setNombre(nombre);
+        login.setNumerodecontrol(numero_control);
+        login.setApellidoM(apellido_m);
+        login.setApellidoP(apellido_p);
+        login.setEmail(email);
+        login.setPwd(contra);
+        login.setEdad(edad);
+        login.setTelefono(tel);
+        login.setNo_de_seguro(seguro);
 
         // si se pulsa el boton encuesta manda a esa plantilla
         button.setOnClickListener(new View.OnClickListener() {
@@ -49,12 +66,13 @@ public class MainActivity2_student extends AppCompatActivity {//implements Respo
                 //extracion de vairables especificas para la plantilla perfil
                 intento.putExtra("numerodecontrol",login.getNumerodecontrol());
                 intento.putExtra("nombre",login.getNombre());
-                intento.putExtra(perfil.apem,login.getApellidosM());
-                intento.putExtra(perfil.correo,login.getEmail());
-                intento.putExtra(perfil.pwd,login.getPwd());
-                intento.putExtra(perfil.edad,login.getEdad());
-                intento.putExtra(perfil.tel,login.getTelefono());
-
+                intento.putExtra("apellidoP",login.getApellidoP());
+                intento.putExtra("apellidoM",login.getApellidoM());
+                intento.putExtra("email",login.getEmail());
+                intento.putExtra("pwd",login.getPwd());
+                intento.putExtra("edad",login.getEdad());
+                intento.putExtra("telefono",login.getTelefono());
+                intento.putExtra("no_de_seguro",login.getNo_de_seguro());
                 startActivity(intento);
         }
     });

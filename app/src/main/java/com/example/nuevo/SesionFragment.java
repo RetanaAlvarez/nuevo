@@ -79,40 +79,36 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
             login.setNombre(jsonObject.optString("nombre"));
             login.setNumerodecontrol(jsonObject.optString("numerodecontrol"));
             login.setApellidoP(jsonObject.optString("apellidoP"));
-            login.setApellidosM(jsonObject.optString("apellidosM"));
+            login.setApellidoM(jsonObject.optString("apellidosM"));
             login.setEdad(jsonObject.optString("edad"));
             login.setNo_de_seguro(jsonObject.optString("no_de_seguro"));
             login.setTelefono(jsonObject.optString("telefono"));
 
            if(jsonObject.optString("ID_privilegios").equals("3")){
                Intent intento = new Intent(getContext(),MainActivity2_student.class);
+               intento.putExtra(MainActivity2_student.numero,login.getNumerodecontrol());
                intento.putExtra(MainActivity2_student.name,login.getNombre());
+               intento.putExtra(MainActivity2_student.apep,login.getApellidoP());
+               intento.putExtra(MainActivity2_student.apem,login.getApellidoM());
+               intento.putExtra(MainActivity2_student.correo,login.getEmail());
+               intento.putExtra(MainActivity2_student.pwd,login.getPwd());
+               intento.putExtra(MainActivity2_student.edad,login.getEdad());
+               intento.putExtra(MainActivity2_student.tel,login.getTelefono());
+               intento.putExtra(MainActivity2_student.no_de_seguro,login.getNo_de_seguro());
                startActivity(intento);
-
-               intento.putExtra(perfil.uss,login.getNombre());
-               intento.putExtra(perfil.apep,login.getApellidoP());
-               intento.putExtra(perfil.apem,login.getApellidosM());
-               intento.putExtra(perfil.correo,login.getEmail());
-               intento.putExtra(perfil.pwd,login.getPwd());
-               intento.putExtra(perfil.edad,login.getEdad());
-               intento.putExtra(perfil.tel,login.getTelefono());
-               intento.putExtra(perfil.no_de_seguro,login.getNo_de_seguro());
-
 
             }else if(jsonObject.optString("ID_privilegios").equals ("1") ||
                         jsonObject.optString("ID_privilegios").equals("2")  ){
                Intent intento = new Intent(getContext(),Main_alumnos_docentes.class );
-               intento.putExtra(Main_alumnos_docentes.names,login.getNombre());
+               intento.putExtra(Main_alumnos_docentes.name,login.getNombre());
+               intento.putExtra(Main_alumnos_docentes.apep,login.getApellidoP());
+               intento.putExtra(Main_alumnos_docentes.apem,login.getApellidoM());
+               intento.putExtra(Main_alumnos_docentes.correo,login.getEmail());
+               intento.putExtra(Main_alumnos_docentes.pwd,login.getPwd());
+               intento.putExtra(Main_alumnos_docentes.edad,login.getEdad());
+               intento.putExtra(Main_alumnos_docentes.tel,login.getTelefono());
+               intento.putExtra(Main_alumnos_docentes.no_de_seguro,login.getNo_de_seguro());
                startActivity(intento);
-               intento.putExtra(perfil.uss,login.getNombre());
-               intento.putExtra(perfil.apep,login.getApellidoP());
-               intento.putExtra(perfil.apem,login.getApellidosM());
-               intento.putExtra(perfil.correo,login.getEmail());
-               intento.putExtra(perfil.pwd,login.getPwd());
-               intento.putExtra(perfil.edad,login.getEdad());
-               intento.putExtra(perfil.tel,login.getTelefono());
-               intento.putExtra(perfil.no_de_seguro,login.getNo_de_seguro());
-
             }
 
         }catch (JSONException e){

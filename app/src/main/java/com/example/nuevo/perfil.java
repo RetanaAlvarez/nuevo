@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -37,23 +36,19 @@ public class perfil extends AppCompatActivity {
         buttonnsultar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String URL = "http://controltesjo.000webhostapp.com/sesion.php?&numerodecontrol="+cajanumero.getText();
-                consultar(URL);
+                cajanumero.setText("numero de control: " + getIntent().getStringExtra("numerodecontrol"));
+                cajatextnombre.setText("Nombre :" + getIntent().getStringExtra("nombre"));
+                cajaapellp.setText("apellido P: " + getIntent().getStringExtra("apellidoP"));
+                cajaapellM.setText("apellido M: " + getIntent().getStringExtra("apellidoM"));
+                cajacorreo.setText("email: " + getIntent().getStringExtra("email"));
+                cajapwd.setText("pwd: " + getIntent().getStringExtra("pwd"));
+                cajaedad.setText("edad: " + getIntent().getStringExtra("edad"));
+                cajatel.setText("telefono: " + getIntent().getStringExtra("telefono"));
+                cajaseguro.setText("no de seguro: " + getIntent().getStringExtra("no_de_seguro"));
             }
         });
     }
-    public void consultar(String URL){
-        Toast.makeText(getApplicationContext(),""+URL, Toast.LENGTH_SHORT).show();
-                    cajanumero.setText("numero de control: " + getIntent().getStringExtra("numerodecontrol"));
-                    cajatextnombre.setText("Nombre :" + getIntent().getStringExtra("nombre"));
-                    cajaapellp.setText("apellido P: " + getIntent().getStringExtra("apellidoP"));
-                    cajaapellM.setText("apellido M: " + getIntent().getStringExtra("apellidoM"));
-                    cajacorreo.setText("email: " + getIntent().getStringExtra("email"));
-                    cajapwd.setText("pwd: " + getIntent().getStringExtra("pwd"));
-                    cajaedad.setText("edad: " + getIntent().getStringExtra("edad"));
-                    cajatel.setText("telefono: " + getIntent().getStringExtra("telefono"));
-                    cajaseguro.setText("no de seguro: " + getIntent().getStringExtra("no_de_seguro"));
-            }
+
         public void salir (View v){
             finish();
         }

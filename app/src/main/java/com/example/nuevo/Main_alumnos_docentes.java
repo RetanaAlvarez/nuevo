@@ -12,7 +12,7 @@ public class Main_alumnos_docentes extends AppCompatActivity {
     //creacion de botones variables
     public Button button,button2;
     //creacion de extracion del nombre
-    public static  final  String names = "nombre";
+    public static final String name = "nombre", numero = "numerodecontrol",apep = "apellidoP", apem = "apellidoM", edad = "edad", tel = "telefono",correo = "email", pwd = "pwd", no_de_seguro = "no_de_seguro", ID_privilegios = "ID_privilegios";
     //variable del texto
     TextView cajaBienvenido;
     @Override
@@ -23,11 +23,31 @@ public class Main_alumnos_docentes extends AppCompatActivity {
         User login= new User();
         cajaBienvenido=(TextView)findViewById(R.id.txtBienvenida);
         //extracion y colocacion del nombre del usuario
-        String logi=getIntent().getStringExtra("nombre");
-        cajaBienvenido.setText("¡bienvenido "+logi+"!");
+
+        String  numero_control= getIntent().getStringExtra("numerodecontrol");
+        String  nombre = getIntent().getStringExtra("nombre");
+        String  apellido_p= getIntent().getStringExtra("apellidoP");
+        String  apellido_m= getIntent().getStringExtra("apellidoM");
+        String  email= getIntent().getStringExtra("email");
+        String  contra= getIntent().getStringExtra("pwd");
+        String  edad= getIntent().getStringExtra("edad");
+        String  tel= getIntent().getStringExtra("telefono");
+        String  seguro= getIntent().getStringExtra("no_de_seguro");
+        cajaBienvenido.setText("¡bienvenido "+nombre+"!");
         //declarando variable con la funciones de la plantilla
         button= (Button) findViewById(R.id.button);
         button2= (Button) findViewById(R.id.button2);
+
+        login.setNombre(nombre);
+        login.setNumerodecontrol(numero_control);
+        login.setApellidoM(apellido_m);
+        login.setApellidoP(apellido_p);
+        login.setEmail(email);
+        login.setPwd(contra);
+        login.setEdad(edad);
+        login.setTelefono(tel);
+        login.setNo_de_seguro(seguro);
+
         //intrucciones que si el button de izquierda se da nos ridicionara a la plantalla de encuesta
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,10 +60,17 @@ public class Main_alumnos_docentes extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main_alumnos_docentes.this,perfil.class);
-                intent.putExtra(perfil.uss,login.getNombre());
-                intent.putExtra(perfil.numero,login.getNumerodecontrol());
-                startActivity(intent);
+                Intent intento = new Intent(Main_alumnos_docentes.this,perfil.class);
+                intento.putExtra("numerodecontrol",login.getNumerodecontrol());
+                intento.putExtra("nombre",login.getNombre());
+                intento.putExtra("apellidoP",login.getApellidoP());
+                intento.putExtra("apellidoM",login.getApellidoM());
+                intento.putExtra("email",login.getEmail());
+                intento.putExtra("pwd",login.getPwd());
+                intento.putExtra("edad",login.getEdad());
+                intento.putExtra("telefono",login.getTelefono());
+                intento.putExtra("no_de_seguro",login.getNo_de_seguro());
+                startActivity(intento);
             }
         });
     }
