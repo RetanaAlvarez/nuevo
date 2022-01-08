@@ -9,8 +9,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-
 public class encuesta extends AppCompatActivity {
     //Se declaran los objetos para usarlos
     RadioButton rdOpc2,rdOpc1;

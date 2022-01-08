@@ -29,6 +29,9 @@ public class MainActivity2_student extends AppCompatActivity {//implements Respo
         //asignacion con las variables y las variables
         button= (Button) findViewById(R.id.Button_encuesta);
         button3=(Button)findViewById(R.id.button_lector);
+        login.setNumerodecontrol("2334455456677");
+        login.setNombre(logi);
+
         // si se pulsa el boton encuesta manda a esa plantilla
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,13 +47,14 @@ public class MainActivity2_student extends AppCompatActivity {//implements Respo
             public void onClick(View v) {
                 Intent intento = new Intent(MainActivity2_student.this,perfil.class);
                 //extracion de vairables especificas para la plantilla perfil
-                intento.putExtra(perfil.uss,login.getNombre());
-                intento.putExtra(perfil.apep,login.getApellidoP());
+                intento.putExtra("numerodecontrol",login.getNumerodecontrol());
+                intento.putExtra("nombre",login.getNombre());
                 intento.putExtra(perfil.apem,login.getApellidosM());
                 intento.putExtra(perfil.correo,login.getEmail());
                 intento.putExtra(perfil.pwd,login.getPwd());
                 intento.putExtra(perfil.edad,login.getEdad());
                 intento.putExtra(perfil.tel,login.getTelefono());
+
                 startActivity(intento);
         }
     });

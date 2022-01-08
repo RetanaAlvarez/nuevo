@@ -4,31 +4,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.JsonRequest;
+
 
 public class perfil extends AppCompatActivity {
-    //llamada de funciones RequesQueve y JsonRequest
-    RequestQueue rq;
-    JsonRequest jrq;
+
     //set y get
     User login = new User();
-    //variables y declariones que
+    //variables y declariones que se van usar
     public Button button, buttonnsultar;
-    public static final String uss = "nombre", numero = "numerodecontrol",
-            apep = "apellidoP", apem = "apellidoM", edad = "edad", tel = "telefono",
-            correo = "email", pwd = "pwd", no_de_seguro = "no_de_seguro", ID_privilegios = "ID_privilegios";
-
+    public static final String uss = "nombre", numero = "numerodecontrol",apep = "apellidoP", apem = "apellidoM", edad = "edad", tel = "telefono",correo = "email", pwd = "pwd", no_de_seguro = "no_de_seguro", ID_privilegios = "ID_privilegios";
     TextView cajatextnombre, cajanumero, cajaapellp, cajaapellM, cajacorreo, cajapwd, cajaedad, cajatel, cajaseguro;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
-
 
         buttonnsultar = (Button) findViewById(R.id.buttonnsultar);
         cajatextnombre = (TextView) findViewById(R.id.textnombre);
@@ -44,31 +37,23 @@ public class perfil extends AppCompatActivity {
         buttonnsultar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    consultar();
+                String URL = "http://controltesjo.000webhostapp.com/sesion.php?&numerodecontrol="+cajanumero.getText();
+                consultar(URL);
             }
         });
     }
-    public void consultar(){
-        String url = "http://controltesjo.000webhostapp.com/sesion.php?&numerodecontrol=&numerodecontrol";
-        String logi = getIntent().getStringExtra("numerodecontrol");
-        cajanumero.setText("numero de control: " + logi);
-        logi = getIntent().getStringExtra("nombre");
-        cajatextnombre.setText("Nombre :" + logi );
-        logi = getIntent().getStringExtra("apellidoP");
-        cajaapellp.setText("apellido P: " + logi);
-        logi = getIntent().getStringExtra("apellidoM");
-        cajaapellM.setText("apellido M: " + logi);
-        logi = getIntent().getStringExtra("email");
-        cajacorreo.setText("email: " + logi);
-        logi = getIntent().getStringExtra("pwd");
-        cajapwd.setText("pwd: " + logi);
-        logi = getIntent().getStringExtra("edad");
-        cajaedad.setText("edad: " + logi);
-        logi = getIntent().getStringExtra("telefono");
-        cajatel.setText("telefono: " + logi);
-        logi = getIntent().getStringExtra("no_de_seguro");
-        cajaseguro.setText("no de seguro: " + logi);
-    }
+    public void consultar(String URL){
+        Toast.makeText(getApplicationContext(),""+URL, Toast.LENGTH_SHORT).show();
+                    cajanumero.setText("numero de control: " + getIntent().getStringExtra("numerodecontrol"));
+                    cajatextnombre.setText("Nombre :" + getIntent().getStringExtra("nombre"));
+                    cajaapellp.setText("apellido P: " + getIntent().getStringExtra("apellidoP"));
+                    cajaapellM.setText("apellido M: " + getIntent().getStringExtra("apellidoM"));
+                    cajacorreo.setText("email: " + getIntent().getStringExtra("email"));
+                    cajapwd.setText("pwd: " + getIntent().getStringExtra("pwd"));
+                    cajaedad.setText("edad: " + getIntent().getStringExtra("edad"));
+                    cajatel.setText("telefono: " + getIntent().getStringExtra("telefono"));
+                    cajaseguro.setText("no de seguro: " + getIntent().getStringExtra("no_de_seguro"));
+            }
         public void salir (View v){
             finish();
         }
