@@ -2,10 +2,13 @@
     <string name="app_name">INGRESO AL TEC</string>
 
 
-    <string name="tittle_fragment">Inicio de sesion</string>
+    <string name="tittle_fragment">Inicio de sesión</string>
     <string name="tittle_User">Usuario: </string>
     <string name="tittle_pwd">Contraseña: </string>
-    <string name="tittle_boton">Iniciar de Sesion</string>
+    <string name="tittle_boton">Iniciar de Sesión</string>
+    <string name="instrucciones">Contéstalo de la forma mas honesta posible y no relacionar con otros síntomas que no sean COVID</string>
+    <string name="pregunta_1">¿Has tenido contacto con gente de COVID?</string>
+
     <string name="boton_encuesta">Encuesta</string>
     <string name="Button_perfil">Datos del perfil</string>
     <string name="button_Qr">Generador de Qr</string>

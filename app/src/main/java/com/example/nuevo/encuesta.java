@@ -51,7 +51,7 @@ public class encuesta extends AppCompatActivity {
             Npregunta = Npregunta + 1;
             //Se setean los textos para la siguiente pregunta
             txtNpregunta.setText("Pregunta 2");
-            txtPregunta.setText("¿Presentas sintomas de fiebre?");
+            txtPregunta.setText("¿Presentas síntomas de fiebre?");
             rdOpc2.setText("SÍ");
             rdOpc1.setText("NO");
             //Se verifica la respuesta, si es correcta se agregan 2 puntos a la nota
@@ -70,7 +70,7 @@ public class encuesta extends AppCompatActivity {
             Npregunta = Npregunta + 1;
             //Se setean los textos para la siguiente pregunta
             txtNpregunta.setText("Pregunta 3");
-            txtPregunta.setText("¿Presentas sintomas de cansancio?");
+            txtPregunta.setText("¿Presentas síntomas de cansancio?");
             rdOpc1.setText("SÍ");
             rdOpc2.setText("NO");
             //Se limpian los Radio buttons para la siguiente pregunta

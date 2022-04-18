@@ -15,7 +15,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="41dp"
         android:layout_marginEnd="8dp"
-        android:text="Tecnologico de Estudios superiores de Jocottilan"
+        android:text="TECNOLÓGICO DE ESTUDIOS SUPERIORES DE JOCOTITLÁN"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
