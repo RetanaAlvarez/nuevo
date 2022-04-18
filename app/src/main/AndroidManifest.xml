@@ -42,14 +42,6 @@
             android:name=".MainActivity2_student"
             android:exported="true"
             android:parentActivityName=".MainActivity2_student" />
-        <activity
-            android:name=".perfil"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
