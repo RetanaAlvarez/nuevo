@@ -40,7 +40,7 @@
             android:exported="true" />
         <activity
             android:name=".encuesta"
-            android:exported="true" />
+            android:exported="true"  />
         <activity
             android:name=".MainActivity2_student"
             android:exported="true"
