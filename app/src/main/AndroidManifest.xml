@@ -33,6 +33,9 @@
             android:name=".qr"
             android:exported="true" />
         <activity
+            android:name=".perfil"
+            android:exported="true"/>
+        <activity
             android:name=".Main_alumnos_docentes"
             android:exported="true" />
         <activity
