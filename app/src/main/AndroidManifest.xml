@@ -17,7 +17,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/faces"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Nuevo"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
         <activity
             android:name=".lector_qr"

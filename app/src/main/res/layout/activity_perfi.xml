@@ -25,10 +25,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="52dp"
         android:text="@string/id"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texttitulo"
+        app:layout_constraintTop_toBottomOf="@+id/Imaperfil"
         tools:text="@string/id" />
 
     <TextView
@@ -135,17 +134,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btnsalir" />
+        app:layout_constraintStart_toEndOf="@+id/btnsalir"
+        app:layout_constraintTop_toBottomOf="@+id/Imaperfil"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/Imaperfil"
         android:layout_width="204dp"
         android:layout_height="164dp"
         android:rotation="-90"
-        app:layout_constraintBottom_toTopOf="@+id/btncamara"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textCorreo"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/texttitulo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

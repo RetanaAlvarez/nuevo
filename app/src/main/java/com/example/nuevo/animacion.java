@@ -20,32 +20,13 @@ import java.util.TimerTask;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_animacion);
-        /*
-        Animation animacion1 = AnimationUtils.loadAnimation(this, R.anim.desplazamiento_arriba);
-        Animation animacion2 = AnimationUtils.loadAnimation(this, R.anim.desplazamiento_abajo);
 
-        ImageView imagenanimacion=findViewById(R.id.imagenanimacion);
-
-        imagenanimacion.setAnimation(animacion1);
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent( animacion.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        }, 4000);*/
 
         TimerTask tarea = new TimerTask() {
             @Override
             public void run() {
-/*
-                FragmentManager fm = getSupportFragmentManager();
-                fm.beginTransaction().replace(R.id.escenario, new SesionFragment()).commit();*/
-
                 Intent intent = new Intent(animacion.this,MainActivity.class);
                 startActivity(intent);
                 finish();
