@@ -1,6 +1,7 @@
      package com.example.nuevo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,31 +12,46 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
      public class animacion extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_animacion);
+        /*
         Animation animacion1 = AnimationUtils.loadAnimation(this, R.anim.desplazamiento_arriba);
         Animation animacion2 = AnimationUtils.loadAnimation(this, R.anim.desplazamiento_abajo);
 
-        TextView textanimacion = findViewById(R.id.textanimacion);
         ImageView imagenanimacion=findViewById(R.id.imagenanimacion);
 
-        textanimacion.setAnimation(animacion2);
         imagenanimacion.setAnimation(animacion1);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(animacion.this, SesionFragment.class);
+                Intent intent = new Intent( animacion.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
-        }, 2000);
+        }, 4000);*/
 
-        setContentView(R.layout.activity_animacion);
+        TimerTask tarea = new TimerTask() {
+            @Override
+            public void run() {
+/*
+                FragmentManager fm = getSupportFragmentManager();
+                fm.beginTransaction().replace(R.id.escenario, new SesionFragment()).commit();*/
+
+                Intent intent = new Intent(animacion.this,MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        };
+        Timer tiempo = new Timer();
+        tiempo.schedule(tarea, 5000);
     }
 }

@@ -24,6 +24,7 @@ import org.json.JSONObject;
 
 
 public class SesionFragment extends Fragment implements  Response.Listener<JSONObject>, Response.ErrorListener {
+
     User login = new User();
     RequestQueue rq;
     JsonRequest jrq;
