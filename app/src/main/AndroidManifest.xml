@@ -19,7 +19,6 @@
         <activity
             android:name=".lector_qr"
             android:exported="true" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -33,18 +32,20 @@
             android:name=".qr"
             android:exported="true" />
         <activity
-            android:name=".perfil"
-            android:exported="true"/>
-        <activity
             android:name=".Main_alumnos_docentes"
             android:exported="true" />
         <activity
             android:name=".encuesta"
-            android:exported="true"  />
+            android:exported="true" />
+        android:exported="true" />
         <activity
             android:name=".MainActivity2_student"
             android:exported="true"
             android:parentActivityName=".MainActivity2_student" />
+        <activity
+            android:name=".perfil"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>
