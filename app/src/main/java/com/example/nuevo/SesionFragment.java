@@ -2,11 +2,13 @@ package com.example.nuevo;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.format.Time;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 import com.android.volley.Request;
@@ -16,12 +18,12 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.Volley;
-
+import java.util.Date;
+//import java.sql.Time;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-
+import org.w3c.dom.Text;
 
 public class SesionFragment extends Fragment implements  Response.Listener<JSONObject>, Response.ErrorListener {
 
@@ -29,8 +31,8 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
     RequestQueue rq;
     JsonRequest jrq;
 
-
     EditText cajaemail,cajapwd;
+    TextView vt;
     Button btnConsultar;
 
     @Override
@@ -42,18 +44,23 @@ public class SesionFragment extends Fragment implements  Response.Listener<JSONO
         cajaemail=(EditText) vista.findViewById(R.id.txtUser);
         cajapwd=(EditText) vista.findViewById(R.id.txtpwd);
         btnConsultar= (Button) vista.findViewById(R.id.btnSesion);
-
+        vt=(TextView) vista.findViewById(R.id.texthora);
         rq = Volley.newRequestQueue(getContext());
 
         btnConsultar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 iniciarSecion();
-
             }
-        }
-        );
+        });
+        Time today= new Time(Time.getCurrentTimezone());
+        today.setToNow();
+        int dia=today.monthDay;
+        int mes=today.month;
+        int ano=today.year;
+        mes=mes+1;
+        vt.setText("    fecha:"+dia+"/"+mes+"/"+ano);
+
         return vista;
     }
 
