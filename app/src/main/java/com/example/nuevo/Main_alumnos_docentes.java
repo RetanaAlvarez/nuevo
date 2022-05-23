@@ -33,7 +33,7 @@ public class Main_alumnos_docentes extends AppCompatActivity {
         String  edad= getIntent().getStringExtra("edad");
         String  tel= getIntent().getStringExtra("telefono");
         String  seguro= getIntent().getStringExtra("no_de_seguro");
-        cajaBienvenido.setText("¡bienvenido "+nombre+"!");
+        cajaBienvenido.setText("¡BIENVENID@ "+nombre+"!");
         //declarando variable con la funciones de la plantilla
         button= (Button) findViewById(R.id.button);
         button2= (Button) findViewById(R.id.button2);

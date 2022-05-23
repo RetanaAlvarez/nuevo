@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.nuevo">
+    package="com.example.nuevo" >
 
-    <uses-feature android:name="android.hardware.camera"
-        android:required="true"></uses-feature>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission
@@ -18,24 +19,27 @@
         android:roundIcon="@drawable/faces"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".lector_qr"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-
         <activity
             android:name=".animacion"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
         <activity
             android:name=".qr"
             android:exported="true" />
@@ -45,14 +49,13 @@
         <activity
             android:name=".encuesta"
             android:exported="true" />
-        android:exported="true" />
         <activity
             android:name=".MainActivity2_student"
             android:exported="true"
             android:parentActivityName=".MainActivity2_student" />
         <activity
             android:name=".perfil"
-            android:exported="true">
+            android:exported="true" >
         </activity>
     </application>
 

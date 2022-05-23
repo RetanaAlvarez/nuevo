@@ -35,7 +35,7 @@ public class MainActivity2_student extends AppCompatActivity {//implements Respo
         String  seguro= getIntent().getStringExtra("no_de_seguro");
 
 
-        cajaBienvenido.setText("¡bienvenido " + nombre + "!");
+        cajaBienvenido.setText("¡BIENVENID@ " + nombre + "!");
         //asignacion con las variables y las variables
         button= (Button) findViewById(R.id.Button_encuesta);
         button3=(Button)findViewById(R.id.button_lector);

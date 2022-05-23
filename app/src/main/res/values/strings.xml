@@ -7,7 +7,7 @@
     <string name="tittle_pwd">Contraseña: </string>
     <string name="tittle_boton">Iniciar de Sesión</string>
     <string name="instrucciones">Contéstalo de la forma mas honesta posible y no relacionar con otros síntomas que no sean COVID</string>
-    <string name="pregunta_1">¿Has tenido contacto con gente de COVID?</string>
+    <string name="pregunta_1">¿Has tenido contacto con personas infectadas con COVID 19?</string>
 
     <string name="boton_encuesta">Encuesta</string>
     <string name="Button_perfil">Datos del perfil</string>
@@ -28,6 +28,17 @@
     <string name="usuario">Usuario:</string>
     <string name="tecnol_gico_de_estudios_superiores_de_jocotitl_n">TECNOLÓGICO DE ESTUDIOS SUPERIORES DE JOCOTITLÁN</string>
     <string name="btnCamara">Camara</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
 
 
 
