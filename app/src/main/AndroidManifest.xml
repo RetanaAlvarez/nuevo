@@ -16,15 +16,10 @@
         android:allowBackup="true"
         android:icon="@drawable/tesjo"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/faces"
+        android:roundIcon="@drawable/tesjo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true" >
-        <activity
-            android:name=".MainActivity2"
-            android:exported="false"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/NoActionBar" />
         <activity
             android:name=".lector_qr"
             android:exported="true" />
