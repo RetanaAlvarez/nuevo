@@ -7,7 +7,6 @@
     tools:context=".MainActivity2_student">
 
 
-
     <ImageView
         android:id="@+id/imageView10"
         android:layout_width="418dp"
@@ -51,6 +50,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textbienvenida"
         tools:text="@string/boton_encuesta" />
+
 
     <Button
         android:id="@+id/button_perfil"
