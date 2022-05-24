@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2_student">
 
+
+
     <ImageView
         android:id="@+id/imageView10"
         android:layout_width="418dp"
@@ -28,32 +30,23 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         tools:text="BIENVENID@" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="120dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/edomex" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="204dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+    <Button
+        android:id="@+id/button_lector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/button_lector"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/tesjo" />
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_perfil" />
 
     <Button
         android:id="@+id/Button_encuesta"
         android:layout_width="122dp"
         android:layout_height="48dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="16dp"
         android:text="@string/boton_encuesta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textbienvenida"
@@ -63,22 +56,32 @@
         android:id="@+id/button_perfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
         android:text="@string/Button_perfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textbienvenida"
         tools:text="@string/Button_perfil" />
 
-    <Button
-        android:id="@+id/button_lector"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="204dp"
+        android:layout_height="58dp"
         android:layout_marginTop="32dp"
-        android:text="@string/button_lector"
+        android:layout_marginEnd="28dp"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tesjo" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="120dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_perfil" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/edomex" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
